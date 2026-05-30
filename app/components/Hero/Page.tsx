@@ -229,7 +229,7 @@ export default function Hero() {
           100% { stroke-dashoffset: -360; opacity: 0; }
         }
       `}</style>
-      <div className="pointer-events-none absolute inset-0 z-0 overflow-visible">
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-visible hidden sm:block">
         <svg
           className="absolute bottom-32 left-3 h-32 w-40 overflow-visible text-white/90 sm:bottom-40 sm:left-10 sm:h-40 sm:w-52"
           viewBox="0 0 180 190"
@@ -491,7 +491,7 @@ export default function Hero() {
         <h1 className="relative inline-block text-2xl sm:text-5xl font-bold leading-snug">
           Jasa Pembuatan Website
           <svg
-            className="absolute -bottom-4 left-1/2 h-5 w-[88%] -translate-x-1/2 text-orange-400 sm:-bottom-6 sm:h-7"
+            className="hidden sm:block absolute -bottom-4 left-1/2 h-5 w-[88%] -translate-x-1/2 text-orange-400 sm:-bottom-6 sm:h-7"
             viewBox="0 0 420 36"
             fill="none"
             aria-hidden="true"
