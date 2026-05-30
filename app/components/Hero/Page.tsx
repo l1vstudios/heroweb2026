@@ -534,9 +534,9 @@ export default function Hero() {
           </button>
           <a
             href="/source"
-            className="shimmer-btn relative overflow-hidden group flex items-center gap-2 border border-white text-white hover:bg-white hover:text-[#12378C] px-6 sm:px-8 py-3 rounded-full font-semibold transition"
+            className="shimmer-btn relative overflow-hidden group flex items-center justify-center gap-2 border border-white text-white hover:bg-white hover:text-[#12378C] px-6 sm:px-8 py-3 rounded-full font-semibold transition"
           >
-            <span className="relative z-10 flex items-center gap-2">
+            <span className="relative z-10 flex w-full items-center justify-center gap-2 text-center">
               <FiFile className="text-xl" />
               Repository Project
             </span>
