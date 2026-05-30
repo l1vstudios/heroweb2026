@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import BrokenLinkGuard from "./components/BrokenLinkGuard";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         suppressHydrationWarning
       >
         {children}
+        <BrokenLinkGuard />
         <ScrollToTopButton />
       </body>
     </html>

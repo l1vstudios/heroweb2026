@@ -11,6 +11,8 @@ import {
   ChevronDown,
   Share2,
   Check,
+  SearchX,
+  ArrowLeft,
 } from "lucide-react";
 import { useState } from "react";
 import { HiOutlineViewGrid } from "react-icons/hi";
@@ -185,10 +187,41 @@ export default function ListPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
           {filteredItems.length === 0 && (
             <div className="col-span-1 sm:col-span-2 lg:col-span-3">
-              <div className="w-full bg-white border border-gray-300 shadow-md rounded-xl p-10 text-center">
-                <p className="text-gray-700 text-lg font-semibold">
-                  Maaf, source code dengan kategori ini kosong.
-                </p>
+              <div className="relative w-full overflow-hidden rounded-2xl border border-blue-100 bg-white shadow-xl">
+                <div className="pointer-events-none absolute -top-14 -left-14 h-44 w-44 rounded-full bg-blue-100/70 blur-2xl" />
+                <div className="pointer-events-none absolute -bottom-16 -right-16 h-52 w-52 rounded-full bg-orange-100/80 blur-2xl" />
+                <div className="relative px-6 py-12 text-center sm:px-10">
+                  <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-red-200 bg-red-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-red-600">
+                    <SearchX className="h-4 w-4" />
+                    404 Not Found
+                  </span>
+                  <h3 className="text-4xl font-extrabold leading-none text-[#12378C] sm:text-6xl">
+                    404
+                  </h3>
+                  <p className="mt-3 text-xl font-semibold text-[#0c1633]">
+                    Sourcecode tidak ditemukan
+                  </p>
+                  <p className="mx-auto mt-2 max-w-xl text-sm text-slate-600 sm:text-base">
+                    Kategori <span className="font-bold text-[#12378C]">{activeTab}</span>{" "}
+                    belum memiliki sourcecode yang tersedia saat ini.
+                  </p>
+                  <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                    <button
+                      type="button"
+                      onClick={() => setActiveTab("Semua")}
+                      className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#12378C] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-[#0f2f78]"
+                    >
+                      <ArrowLeft className="h-4 w-4" />
+                      Kembali ke Semua Sourcecode
+                    </button>
+                    <Link
+                      href="/"
+                      className="inline-flex items-center justify-center rounded-xl border border-gray-300 bg-white px-5 py-2.5 text-sm font-semibold text-gray-700 transition hover:bg-gray-50"
+                    >
+                      Ke Beranda
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           )}

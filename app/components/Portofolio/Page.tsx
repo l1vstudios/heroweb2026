@@ -1,7 +1,12 @@
 "use client";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { showUnavailableToast } from "@/app/lib/showUnavailableToast";
 export default function Portfolio() {
+  const handleDetailClick = () => {
+    showUnavailableToast();
+  };
+
   const portfolios = [
     {
       id: 1,
@@ -168,9 +173,13 @@ export default function Portfolio() {
                     backdropFilter: "blur(2px)",
                   }}
                 >
-                  <span className="text-white text-sm font-semibold tracking-wide border border-white/60 px-4 py-2 rounded-[5px]">
+                  <button
+                    type="button"
+                    onClick={handleDetailClick}
+                    className="text-white text-sm font-semibold tracking-wide border border-white/60 px-4 py-2 rounded-[5px]"
+                  >
                     Lihat Detail
-                  </span>
+                  </button>
                 </div>
               </div>
               {}
@@ -207,6 +216,8 @@ export default function Portfolio() {
         {}
         <div className="flex justify-center">
           <button
+            type="button"
+            data-coming-soon="true"
             className="group relative mt-12 flex items-center gap-3 px-10 py-4 rounded-[5px] font-bold text-base text-white shadow-lg transition-all duration-300 hover:scale-105"
             style={{
               background: "#12378C",

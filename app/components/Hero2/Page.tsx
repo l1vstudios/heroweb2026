@@ -36,11 +36,58 @@ export default function Hero() {
         style={{ clipPath: "ellipse(100% 45% at 50% 100%)" }}
       />
       <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center gap-4 sm:gap-6">
-        <h1 className="text-3xl sm:text-5xl font-bold leading-snug">
+        <h1 className="relative inline-block text-3xl sm:text-5xl font-bold leading-snug">
           Repository Project
+          <svg
+            className="absolute left-1/2 -translate-x-1/2 -bottom-4 sm:-bottom-5 w-[220px] sm:w-[320px] h-5 sm:h-6"
+            viewBox="0 0 320 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              id="scribble-main-path"
+              d="M8 14C36 5 72 20 102 12C132 4 166 18 196 12C226 6 256 18 286 10C300 7 308 8 312 9"
+              stroke="#F97316"
+              strokeWidth="6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeDasharray="420"
+              strokeDashoffset="420"
+            >
+              <animate
+                id="scribble-main"
+                attributeName="stroke-dashoffset"
+                values="420;0;0"
+                keyTimes="0;0.3;1"
+                dur="3.4s"
+                begin="0s"
+                repeatCount="indefinite"
+              />
+            </path>
+            <path
+              id="scribble-second-path"
+              d="M12 18C42 10 76 22 108 16C142 10 176 20 208 15C238 10 268 20 300 13"
+              stroke="#FB923C"
+              strokeWidth="4"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              opacity="0.85"
+              strokeDasharray="360"
+              strokeDashoffset="360"
+            >
+              <animate
+                attributeName="stroke-dashoffset"
+                values="360;0;0"
+                keyTimes="0;0.3;1"
+                dur="3.4s"
+                begin="0.18s"
+                repeatCount="indefinite"
+              />
+            </path>
+          </svg>
         </h1>
         <p className="max-w-2xl text-sm sm:text-lg text-gray-200">
-          Download Aplikasi yang sudah siap jalan
+          Download Aplikasi Siap Pakai
         </p>
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-3 sm:mt-4">
           <button
