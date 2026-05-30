@@ -7,6 +7,7 @@ import {
   SiGo,
   SiJavascript,
   SiLaravel,
+  SiNextdotjs,
   SiPhp,
   SiPython,
   SiReact,
@@ -488,8 +489,9 @@ export default function Hero() {
             Dan Tidak Menerima Pembuatan Website Judi Online
           </span>
         </p>
-        <h1 className="relative inline-block text-2xl sm:text-5xl font-bold leading-snug">
-          Jasa Pembuatan Website
+        <h1 className="relative inline-flex items-center justify-center gap-2 sm:gap-3 text-2xl sm:text-5xl font-bold leading-snug">
+          <SiNextdotjs className="text-white text-xl sm:text-4xl shrink-0" />
+          <span>Jasa Pembuatan Website</span>
           <svg
             className="hidden sm:block absolute -bottom-4 left-1/2 h-5 w-[88%] -translate-x-1/2 text-orange-400 sm:-bottom-6 sm:h-7"
             viewBox="0 0 420 36"

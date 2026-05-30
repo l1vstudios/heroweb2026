@@ -11,11 +11,9 @@ export const metadata: Metadata = {
   title: "HeroWeb",
   description: "Jasa Pembuatan Website Murah",
   icons: {
-    icon: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=64&h=64&q=80",
-    shortcut:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=64&h=64&q=80",
-    apple:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=180&h=180&q=80",
+    icon: "/favicon-hw.png",
+    shortcut: "/favicon-hw.png",
+    apple: "/favicon-hw.png",
   },
 };
 
